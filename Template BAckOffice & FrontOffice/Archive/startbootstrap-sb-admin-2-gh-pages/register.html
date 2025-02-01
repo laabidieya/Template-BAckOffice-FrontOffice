@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Travel Offer</title>
+</head>
+<body>
+    <h1>Add a Travel Offer</h1>
+    <form id="addTravelOfferForm">
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title" minlength="3" required  title="Enter a title for the travel offer. The title must be at least 3 characters long.">
+     <br>
+
+        <label for="destination">Destination:</label><br>
+        <input type="text" id="destination" name="destination" pattern="[A-Za-z ]{3,}" required title="Enter the destination of the travel offer. The destination must be at least 3 characters long and contain only letters and spaces.">
+   <br>
+
+        <label for="departure_date">Departure Date:</label><br>
+        <input type="date" id="departure_date" name="departure_date" required title="Select the departure date.">
+     <br>
+
+        <label for="return_date">Return Date:</label><br>
+        <input type="date" id="return_date" name="return_date" required title="Select the return date.">
+        <br>
+
+        <label for="price">Price :</label><br>
+        <input type="number" id="price" name="price" step="0.01" min="0" required title="Enter the price of the travel offer. The price must be a positive number or decimal.">
+<br>
+
+        <label for="availability">Availability:</label><br>
+        <input type="checkbox" id="availability" name="availability" title="Check if the travel offer is available.">
+        <br>
+
+        <label for="category">Category:</label><br>
+        <select id="category" name="category" title="Select the category of the travel offer.">
+            <option value="adventure">Adventure</option>
+            <option value="relaxation">Relaxation</option>
+            <option value="culture">Culture</option>
+            
+        </select>
+   <br>
+
+        <button type="submit">Add Offer</button>
+    </form>
+</body>
+</html>
